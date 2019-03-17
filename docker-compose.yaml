@@ -5,4 +5,4 @@ services:
     volumes:
       - ./logs:/usr/task/logs/
     expose:
-      - "8080"
+      - "8081"
