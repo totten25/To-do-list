@@ -1,0 +1,3 @@
+com\todolist\task\controllers\TaskControllerTest.class
+com\todolist\task\services\TaskServiceTest.class
+com\todolist\task\controllers\AbstractControllerTest.class
