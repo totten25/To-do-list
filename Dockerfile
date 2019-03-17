@@ -13,4 +13,4 @@ ADD src/main/resources/application.properties /etc/dsci/task/config/
 WORKDIR /usr/task/
 
 # Launch jar file
-ENTRYPOINT ["java", "-jar", "/to-do-list.jar", "--spring.config.location=classpath:/application.properties,/etc/dsci/task/application.properties"]
+ENTRYPOINT ["java", "-jar", "/usr/task/to-do-list.jar", "--spring.config.location=classpath:/application.properties,/etc/dsci/task/application.properties"]

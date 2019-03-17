@@ -4,5 +4,5 @@ services:
     build: ./
     volumes:
       - ./logs:/usr/task/logs/
-    expose:
-      - "8080"
+    ports:
+      - "8080:8080"
