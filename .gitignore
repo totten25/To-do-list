@@ -1,5 +1,8 @@
 HELP.md
 /target/
+!./target/task-*.jar
+!./target/site/*
+!./target/surefire-reports/*
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
