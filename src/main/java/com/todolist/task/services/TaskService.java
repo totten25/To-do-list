@@ -60,6 +60,7 @@ public class TaskService {
 	}
 	
 	public int updateTaskStatus(String status, int id) throws TaskException {
+		getTaskById(id);
 		return taskRepository.updateTaskStatusById(status, id);
 	}
 	

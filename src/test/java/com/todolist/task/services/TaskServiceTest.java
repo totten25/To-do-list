@@ -159,12 +159,15 @@ public class TaskServiceTest {
 		Task updateTask = this.mockSingleTask;
 		updateTask.setStatus(doneStatus);
 		// mock task repository
+		when(taskRepository.findById(updateTaskId)).thenReturn(Optional.ofNullable(this.mockSingleTask));
 		when(taskRepository.updateTaskStatusById(doneStatus, updateTaskId))
 			.thenReturn(1);
 		// update task status
 		int numOfUpdatedRows = taskService.updateTaskStatus(doneStatus, updateTaskId); 
 		// check associated rows are updated
 		assertEquals(1, numOfUpdatedRows);
+		// check findById is executed only 1 time with id as parameters
+		verify(taskRepository, times(1)).findById(updateTaskId);
 		// check updateTaskStatusById is executed only 1 time with status and id as parameters
 		verify(taskRepository, times(1)).updateTaskStatusById(doneStatus, updateTaskId);
 	}
