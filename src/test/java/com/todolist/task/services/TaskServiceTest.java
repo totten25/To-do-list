@@ -134,7 +134,7 @@ public class TaskServiceTest {
 			.matches(t -> t.getDescription().equals(updatedTask.getDescription()))
 			.matches(t -> t.getStatus().equals(updatedTask.getStatus()));
 		// check findById method is executed only 1 time with updateTaskId, updatedTask as parameter
-		verify(taskRepository, times(1)).findById(updateTaskId);
+		verify(taskRepository, times(2)).findById(updateTaskId);
 	}
 	
 	@Test

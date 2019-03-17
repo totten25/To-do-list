@@ -48,6 +48,7 @@ public class TaskService {
 	}
 	
 	public Task update(int id, Task task) throws TaskException {
+		getTaskById(id);
 		Optional<Task> optionalTask = findDuplicateTaskBySubjectAndId(task.getSubject(), id);
 		if (optionalTask.isPresent())
 			throw new TaskException("Task subject["+task.getSubject()+"] has already existed");
