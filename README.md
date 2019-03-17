@@ -1,9 +1,6 @@
 # To-do-list
 Spring Boot Restful API for To-do-list
 
-# To-do-list
-Spring Boot Restful API for To-do-list
-
 1) git clone https://github.com/totten25/To-do-list.git
 
 2) cd To-do-list
