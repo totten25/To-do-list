@@ -1,7 +1,10 @@
 HELP.md
-!target/task-*.jar
-!target/site/*
-!target/surefire-reports/*
+target/classes/*
+target/generated-sources/*
+target/generated-test-sources/*
+target/maven-archiver/*
+target/maven-status/*
+target/test-classes/*
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
