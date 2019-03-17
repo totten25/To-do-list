@@ -1,6 +1,6 @@
 # Use official base image of Java Runtime
-#From openjdk:8-jdk-alpine
-From maven:3-jdk-8
+From openjdk:8-jdk-alpine
+#From maven:3-jdk-8
 
 # Add project into container path
 ADD . /usr/task/
@@ -10,7 +10,7 @@ ADD src/main/resources/application.properties /etc/dsci/task/config/
 
 WORKDIR /usr/task/
 
-RUN mvn clean install
+RUN ./mvnw clean install
 
 # Set spring boot jar file
 ARG JAR_FILE=target/task-0.0.1-SNAPSHOT.jar
