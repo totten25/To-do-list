@@ -1,4 +1,6 @@
 HELP.md
+/target/classes/*/*
+/target/classes/*
 /target/classes/application.properties
 /target/classes/META-INF/*
 /target/generated-sources/*
