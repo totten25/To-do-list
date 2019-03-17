@@ -184,9 +184,9 @@ public class TaskControllerTest extends AbstractControllerTest<TaskController, E
 				.accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(super.convertMapToJson(newTask))).andReturn();
-		// check status is internal server error
+		// check status is bad request
 		int status = mvcResult.getResponse().getStatus();
-		assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.value(), status);
+		assertEquals(HttpStatus.BAD_REQUEST.value(), status);
 		// check error mesage is matched
 		ErrorResponse errorResponse = super.convertMVCResultToMap(mvcResult, ErrorResponse.class);
 		assertThat(errorResponse).isNotNull()
@@ -205,9 +205,9 @@ public class TaskControllerTest extends AbstractControllerTest<TaskController, E
 				.accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(super.convertMapToJson(newTask))).andReturn();
-		// check status is internal server error
+		// check status is bad request
 		int status = mvcResult.getResponse().getStatus();
-		assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.value(), status);
+		assertEquals(HttpStatus.BAD_REQUEST.value(), status);
 		// check error mesage is matched
 		ErrorResponse errorResponse = super.convertMVCResultToMap(mvcResult, ErrorResponse.class);
 		assertThat(errorResponse).isNotNull()
@@ -249,9 +249,9 @@ public class TaskControllerTest extends AbstractControllerTest<TaskController, E
 				.accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(super.convertMapToJson(updatedTask))).andReturn();
-		// check status is internal server error
+		// check status is bad request
 		int status = mvcResult.getResponse().getStatus();
-		assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.value(), status);
+		assertEquals(HttpStatus.BAD_REQUEST.value(), status);
 		// check error mesage is matched
 		ErrorResponse errorResponse = super.convertMVCResultToMap(mvcResult, ErrorResponse.class);
 		assertThat(errorResponse).isNotNull()
@@ -295,9 +295,9 @@ public class TaskControllerTest extends AbstractControllerTest<TaskController, E
 				.accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(super.convertMapToJson(taskStatus))).andReturn();
-		// check status is internal server error
+		// check status is bad request
 		int status = mvcResult.getResponse().getStatus();
-		assertEquals(HttpStatus.INTERNAL_SERVER_ERROR.value(), status);
+		assertEquals(HttpStatus.BAD_REQUEST.value(), status);
 		// check error mesage is matched
 		ErrorResponse errorResponse = super.convertMVCResultToMap(mvcResult, ErrorResponse.class);
 		assertThat(errorResponse).isNotNull()

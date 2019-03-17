@@ -31,7 +31,7 @@ public class ExceptionController {
         ErrorResponse error = new ErrorResponse();
 		error.setErrorCode(HttpStatus.BAD_REQUEST.value());
 		error.setMessage(errorMsg);
-		return new ResponseEntity<ErrorResponse>(error, HttpStatus.INTERNAL_SERVER_ERROR);
+		return new ResponseEntity<ErrorResponse>(error, HttpStatus.BAD_REQUEST);
     }
 	
 }
