@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    build: ./
+    volumes:
+      - ./logs:/usr/task/logs/
+    expose:
+      - "8080"
