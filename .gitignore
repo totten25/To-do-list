@@ -1,14 +1,14 @@
 HELP.md
-#/target/classes/*/*
-#/target/classes/*
-#/target/classes/application.properties
-#/target/classes/META-INF/*
-#/target/generated-sources/*
-#/target/generated-test-sources/*
-#/target/maven-archiver/*
-#/target/maven-status/*
-#/target/test-classes/*
-#/target/task-*
+/target/classes/*/*
+/target/classes/*
+/target/classes/application.properties
+/target/classes/META-INF/*
+/target/generated-sources/*
+/target/generated-test-sources/*
+/target/maven-archiver/*
+/target/maven-status/*
+/target/test-classes/*
+/target/task-*
 /target
 !.mvn/wrapper/maven-wrapper.jar
 
